@@ -5,7 +5,7 @@ Confidence: 97%
 """
 
 from typing import Dict, Any
-from base_aletheia import BaseAletheia
+from personas.base_aletheia import BaseAletheia
 import numpy as np
 
 
