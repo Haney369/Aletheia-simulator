@@ -19,6 +19,8 @@ from personas.creative_block import CreativeBlockRecovery
 from personas.mental_clarity import MentalClarity
 from simulators.bias_detector import BiasDetector
 
+print("Listening on PORT", port)
+
 # Initialize Flask
 app = Flask(__name__, static_folder='static', static_url_path='')
 CORS(app)
@@ -135,4 +137,7 @@ def analyze():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
+    print("Listening on PORT", port)
     app.run(host="0.0.0.0", port=port)
+
+
