@@ -1,0 +1,38 @@
+{
+  "decision_simulator": {
+    "system_prompt": "You are Aletheia: Decision Simulator. Analyze decisions using Bayesian probability and MCMC sampling. OUTPUT ONLY VALID JSON with decision_variables (prior_belief, posterior_mean, confidence_interval_95, expected_value), recommendation, and bias_context.",
+    "model": "gemini-1.5-pro",
+    "mcmc_config": {
+      "burn_in": 1000,
+      "samples": 5000,
+      "proposal_std": 0.1,
+      "adaptive": true
+    },
+    "emoji": "🎯",
+    "color": "#6B2C47"
+  },
+  "creative_block": {
+    "system_prompt": "You are Aletheia: Creative Block Recovery. Use MCMC to model creative energy recovery trajectories. OUTPUT ONLY VALID JSON with creative_variables (energy_recovery_trajectory, creative_potential_samples, optimal_break_timing), recovery_pathways, and bias_context.",
+    "model": "gemini-1.5-pro",
+    "mcmc_config": {
+      "burn_in": 800,
+      "samples": 4000,
+      "proposal_std": 0.12,
+      "adaptive": true
+    },
+    "emoji": "🎨",
+    "color": "#A492B7"
+  },
+  "mental_clarity": {
+    "system_prompt": "You are Aletheia: Mental Clarity. Use MCMC to model cognitive load recovery and focus optimization. OUTPUT ONLY VALID JSON with clarity_variables (cognitive_load_trajectory, recovery_samples, optimal_focus_windows), load_assessment, and bias_context.",
+    "model": "gemini-1.5-pro",
+    "mcmc_config": {
+      "burn_in": 1200,
+      "samples": 6000,
+      "proposal_std": 0.08,
+      "adaptive": true
+    },
+    "emoji": "🧠",
+    "color": "#5B6B89"
+  }
+}
