@@ -129,7 +129,10 @@ def analyze():
     except Exception as e:
         return jsonify({"error": str(e), "confidence_score": 0.0}), 500
 
-if __name__ == '__main__':
-    os.makedirs('static', exist_ok=True)
-    port = int(os.getenv('PORT', 5000))
-    app.run(debug=False, host='0.0.0.0', port=port)
+#if __name__ == '__main__':
+#    os.makedirs('static', exist_ok=True)
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
