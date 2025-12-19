@@ -15,9 +15,11 @@ COPY backend/ .
 
 # Cloud Run expects PORT
 ENV PORT=8080
+ENV PYTHONPATH=/app
 
 # Expose the port
 EXPOSE 8080
 
 # Start Flask app
 CMD ["python", "app.py"]
+
